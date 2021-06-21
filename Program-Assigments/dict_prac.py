@@ -48,17 +48,17 @@ coffee_prices["americano"] -= 1.25
 shoe_inv = {"Jordan 13": 1, "Yeezy" : 8, "Foamposite" : 10, "Air Max": 5, "SB Dunk": 20}
 #print(shoe_inv)
 
-def restock (multiplier):
-    for shoe in shoe_inv:
-        total_items = (shoe_inv[shoe] * multiplier)
-        shoe_inv[shoe] = total_items
-    return total_items
+def restock(shoe_name, multiplier):
+    newInv = shoe_inv[shoe_name] * multiplier
+    shoe_inv[shoe_name] = newInv
+    return shoe_inv
 
-def clearance_sale(shoe_name, clearance_amount):
-    new_price = shoe_inv[shoe] / clearance_amount # new price
-    shoe_inv[shoe_name] = new price # SB DUNK = 20/5 = 4
+def clearance_sale(shoe_name, discount):
+    salePrice = shoe_inv[shoe_name] / discount
+    shoe_inv[shoe_name] = salePrice
+    return shoe_inv
 
-#restock(3)
+#restock("Yeezy", 3)
 clearance_sale("SB Dunk", 5)
 print(shoe_inv)
 

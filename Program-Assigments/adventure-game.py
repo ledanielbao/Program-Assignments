@@ -37,6 +37,7 @@ def gate():
 
   if answer == "1":
     print("You go through the gate and find a janitor that takes you to the exit and you find your family waiting for you.")
+    play_again()
 
   elif answer == "2":
     print("You continue down the path for all eternity, surviving off of bugs and sidewalk mulch. \nYou meet a few people along the way until you finally die of starvation.")
@@ -59,3 +60,5 @@ def play_again():
 
   elif answer == "N":
     exit()
+
+start()
